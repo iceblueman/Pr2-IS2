@@ -19,10 +19,10 @@ public class KATA2IS2 {
     public static void main(String[] args) {
         Integer[] array = {1, 4, 7, 1, 1, 8, 4, 1, 4, 9};
         String[] array1={"Ana","Juan","Pedro","Ana","Juan","Pedro","Ana","Juan","Pedro"};
-        Histogram histo = new Histogram(array1);
-        HashMap<String, Integer> histograma = histo.getHisto();
-        for (Object key: histograma.keySet()) {
-            System.out.println(key+":"+histograma.get(key));
+        Histogram <Integer> histogram = CalCulaHisto.computeHisto(array);
+        //HashMap<String, Integer> histograma = histogram.getHisto();
+        for (Object key: histogram.keySet()) {
+            System.out.println(key+":"+histogram.get(key));
         }
     }
 
